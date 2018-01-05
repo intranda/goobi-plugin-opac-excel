@@ -1,0 +1,20 @@
+<config_plugin>
+    <config>
+	<!-- column number for identifier -->
+        <identifierColumn>0</identifierColumn>
+        <!-- publication type to create, must be defined in ruleset and goobi_opac.xml -->
+        <publicationType>Monograph</publicationType>
+	<!-- path to the excel file -->
+	<filename>/home/robert/2017-10-24 Inventarliste Instrumente.xlsx</filename>
+        <!-- which columns shall be mapped to which which ugh metadata -->
+        <metadata ugh="CatalogIDDigital" column="1" />
+        <metadata ugh="TitleDocMain" column="2" />
+	<metadata ugh="PlaceOfPublication" column="3" identifier="4" />
+        <metadata ugh="PublicationYear" column="5" />
+        <person ugh="Author">
+            <firstname>6</firstname>
+            <lastname>7</lastname>
+            <identifier>8</identifier>
+        </person>
+    </config>
+</config_plugin>
