@@ -15,7 +15,7 @@ import org.apache.commons.configuration.XMLConfiguration;
 import org.apache.commons.configuration.reloading.FileChangedReloadingStrategy;
 import org.apache.commons.configuration.tree.xpath.XPathExpressionEngine;
 import org.apache.commons.io.input.BOMInputStream;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.commons.lang.StringUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -23,7 +23,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.goobi.production.enums.PluginType;
 import org.goobi.production.plugin.interfaces.IOpacPlugin;
-import org.apache.commons.lang.StringUtils;
 
 import de.intranda.goobi.plugins.util.GroupMappingObject;
 import de.intranda.goobi.plugins.util.MetadataMappingObject;
@@ -125,7 +124,7 @@ public class ExcelCataloguePlugin implements IOpacPlugin {
         this.coc = coc;
         Fileformat fileformat = null;
         loadConfig();
-        // read excel file        
+        // read excel file
         InputStream file = null;
         try {
             file = new FileInputStream(excelFileName);
@@ -164,7 +163,7 @@ public class ExcelCataloguePlugin implements IOpacPlugin {
                 return null;
             }
             fileformat = generateMetadata(map, prefs);
-        } catch (InvalidFormatException | IOException e) {
+        } catch ( IOException e) {
             log.error(e);
 
         } finally {
@@ -276,7 +275,7 @@ public class ExcelCataloguePlugin implements IOpacPlugin {
 
     private String getCellValue(Cell cell) {
         String value = null;
-        switch (cell.getCellTypeEnum()) {
+        switch (cell.getCellType()) {
             case BOOLEAN:
                 value = cell.getBooleanCellValue() ? "true" : "false";
                 break;
