@@ -2,10 +2,10 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.intranda.goobi.plugins.opac</groupId>
   <artifactId>excel</artifactId>
-  <version>23.10</version>
+  <version>23.10.1</version>
   <properties>
     <jar.name>plugin_intranda_opac_excel</jar.name>
-    <goobi.version>23.10</goobi.version>
+    <goobi.version>23.10.1</goobi.version>
   </properties>
   <repositories>
     <repository>
