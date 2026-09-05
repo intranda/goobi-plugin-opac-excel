@@ -1,6 +1,9 @@
 # Goobi workflow Plugin: goobi-plugin-opac-excel
 
-<img src="https://goobi.io/wp-content/uploads/logo_goobi_plugin.png" align="right" style="margin:0 0 20px 20px;" alt="Plugin for Goobi workflow" width="175" height="109">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://goobi.io/logo_goobi_workflow_dark.png">
+  <img src="https://goobi.io/logo_goobi_workflow.png" align="right" alt="Plugin for Goobi workflow" width="240" height="132" hspace="20" vspace="10">
+</picture>
 
 This OPAC plugin for Goobi workflow uses an Excel file as a record source to allow the creation of Goobi processes with the imported metadata. Each row works as individual catalogue record and can be requested by searching for a unique value in a specific column.
 
